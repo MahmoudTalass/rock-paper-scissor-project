@@ -47,11 +47,11 @@ function playRound(playerSelection, computerSelection) {
 //The function keeps track of the wins in each round and declares the winner at the end of the 5 rounds
 
 function game() {
-   for (let i = 1; i <= 5; i++) {
-      let playerSelection = prompt("Rock, paper, or scissors?");
-      playerSelection = playerSelection.toLowerCase();
-      playRound(playerSelection, getComputerChoice());
-   }
+   // for (let i = 1; i <= 5; i++) {
+   //    let playerSelection = prompt("Rock, paper, or scissors?");
+   //    playerSelection = playerSelection.toLowerCase();
+   //    playRound(playerSelection, getComputerChoice());
+   // }
    if (score >= 3) {
       console.log("congraduations, you won with a final score of " + score);
    } else {
