@@ -3,7 +3,8 @@ const rockBtn = document.querySelector("#rock-btn");
 const paperBtn = document.querySelector("#paper-btn");
 const scissorsBtn = document.querySelector("#scissors-btn");
 
-
+// Select the div that will contain the results
+const results = document.querySelector("#display-results")
 
 // create variable to keep track of player's score
 let score = 0;
