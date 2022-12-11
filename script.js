@@ -6,6 +6,13 @@ const scissorsBtn = document.querySelector("#scissors-btn");
 // create variable to keep track of player's score
 let score = 0;
 
+// add event listener on the buttons that calls
+// the playeRound function when clicked
+
+rockBtn.addEventListener("click", () => playRound("rock", getComputerChoice()));
+paperBtn.addEventListener("click", () => playRound("paper", getComputerChoice()));
+scissorsBtn.addEventListener("click", () => playRound("scissors", getComputerChoice()));
+
 // Create getComputerChoice() function
 // the function randomly returns either 'Rock', 'Paper' or 'Scissors'.
 // create an array inside the function that contains the possible return values.
@@ -51,16 +58,16 @@ function playRound(playerSelection, computerSelection) {
 //The function calls playRound() function 5 times through a forLoop
 //The function keeps track of the wins in each round and declares the winner at the end of the 5 rounds
 
-function game() {
-   // for (let i = 1; i <= 5; i++) {
-   //    let playerSelection = prompt("Rock, paper, or scissors?");
-   //    playerSelection = playerSelection.toLowerCase();
-   //    playRound(playerSelection, getComputerChoice());
-   // }
-   if (score >= 3) {
-      console.log("congraduations, you won with a final score of " + score);
-   } else {
-      console.log("you lost :( your final score was " + score);
-   }
-}
-game();
+// function game() {
+//    for (let i = 1; i <= 5; i++) {
+//       let playerSelection = prompt("Rock, paper, or scissors?");
+//       playerSelection = playerSelection.toLowerCase();
+//       playRound(playerSelection, getComputerChoice());
+//    }
+//    if (score >= 3) {
+//       console.log("congraduations, you won with a final score of " + score);
+//    } else {
+//       console.log("you lost :( your final score was " + score);
+//    }
+// }
+// game();
