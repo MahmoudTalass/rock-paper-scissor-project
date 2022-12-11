@@ -86,20 +86,3 @@ function playRound(playerSelection, computerSelection) {
    
 }
 
-//Create the function game()
-//The function calls playRound() function 5 times through a forLoop
-//The function keeps track of the wins in each round and declares the winner at the end of the 5 rounds
-
-// function game() {
-//    for (let i = 1; i <= 5; i++) {
-//       let playerSelection = prompt("Rock, paper, or scissors?");
-//       playerSelection = playerSelection.toLowerCase();
-//       playRound(playerSelection, getComputerChoice());
-//    }
-//    if (score >= 3) {
-//       console.log("congraduations, you won with a final score of " + score);
-//    } else {
-//       console.log("you lost :( your final score was " + score);
-//    }
-// }
-// game();
