@@ -4,17 +4,23 @@ const paperBtn = document.querySelector("#paper-btn");
 const scissorsBtn = document.querySelector("#scissors-btn");
 
 // Select the div that will contain the results
-const results = document.querySelector("#display-results")
+const results = document.querySelector("#display-results");
 
 // create variable to keep track of player's score
+// and capture the score div from the html
 let score = 0;
+const displayScore = document.querySelector("#score");
 
 // add event listener on the buttons that calls
 // the playeRound function when clicked
 
 rockBtn.addEventListener("click", () => playRound("rock", getComputerChoice()));
-paperBtn.addEventListener("click", () => playRound("paper", getComputerChoice()));
-scissorsBtn.addEventListener("click", () => playRound("scissors", getComputerChoice()));
+paperBtn.addEventListener("click", () =>
+   playRound("paper", getComputerChoice())
+);
+scissorsBtn.addEventListener("click", () =>
+   playRound("scissors", getComputerChoice())
+);
 
 // Create getComputerChoice() function
 // the function randomly returns either 'Rock', 'Paper' or 'Scissors'.
@@ -55,6 +61,7 @@ function playRound(playerSelection, computerSelection) {
    } else {
       results.textContent = "Draw";
    }
+   displayScore.textContent = score;
 }
 
 //Create the function game()
