@@ -71,6 +71,18 @@ function playRound(playerSelection, computerSelection) {
    }
    displayPlayerScore.textContent = `Your Score: ${playerScore}`;
    displayComputerScore.textContent = `Opponent Score: ${computerScore}`
+
+   if (playerScore === 5) {
+      results.textContent = "You won!"
+      rockBtn.disabled = true;
+      paperBtn.disabled = true;
+      scissorsBtn.disabled = true;
+   } else if (computerScore === 5) {
+      results.textContent = "You lost."
+      rockBtn.disabled = true;
+      paperBtn.disabled = true;
+      scissorsBtn.disabled = true;
+   }
    
 }
 
