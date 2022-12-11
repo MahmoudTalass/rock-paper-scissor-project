@@ -7,9 +7,14 @@ const scissorsBtn = document.querySelector("#scissors-btn");
 const results = document.querySelector("#display-results");
 
 // create variable to keep track of player's score
-// and capture the score div from the html
-let score = 0;
-const displayScore = document.querySelector("#score");
+// and capture the player-score div from the html
+let playerScore = 0;
+const displayPlayerScore = document.querySelector("#player-score");
+
+// create a viariable to keep track of the computer's score
+// and capture the computer-score div from the html
+let computerScore = 0;
+const displayComputerScore = document.querySelector("#computer-score");
 
 // add event listener on the buttons that calls
 // the playeRound function when clicked
@@ -45,23 +50,28 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
    if (playerSelection === "rock" && computerSelection === "paper") {
       results.textContent = "You Lose! Paper beats Rock";
+      computerScore++;
    } else if (playerSelection === "rock" && computerSelection === "scissors") {
       results.textContent = "You Win! Rock beats Scissors";
-      score++;
+      playerScore++;
    } else if (playerSelection === "paper" && computerSelection === "rock") {
       results.textContent = "You Win! Paper beats Rock";
-      score++;
+      playerScore++;
    } else if (playerSelection === "paper" && computerSelection === "scissors") {
       results.textContent = "You Lose! Scissors beats Paper";
+      computerScore++;
    } else if (playerSelection === "scissors" && computerSelection === "rock") {
       results.textContent = "You Lose! Rock beats Scissors";
+      computerScore++;
    } else if (playerSelection === "scissors" && computerSelection === "paper") {
       results.textContent = "You Win! Scissors beats Paper";
-      score++;
+      playerScore++;
    } else {
       results.textContent = "Draw";
    }
-   displayScore.textContent = score;
+   displayPlayerScore.textContent = `Your Score: ${playerScore}`;
+   displayComputerScore.textContent = `Opponent Score: ${computerScore}`
+   
 }
 
 //Create the function game()
