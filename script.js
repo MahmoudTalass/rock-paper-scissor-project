@@ -1,3 +1,8 @@
+// Select the buttons from the html
+const rockBtn = document.querySelector("#rock-btn");
+const paperBtn = document.querySelector("#paper-btn");
+const scissorsBtn = document.querySelector("#scissors-btn");
+
 // create variable to keep track of player's score
 let score = 0;
 
