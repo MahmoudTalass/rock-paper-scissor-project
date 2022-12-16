@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 * {
    margin: 0;
    padding: 0;
+   font-family: 'Poppins', sans-serif;
+   color: white;
 }
 
 body {
@@ -9,11 +13,41 @@ body {
 
 .btn {
     background-color: inherit;
-    border: 1px solid rgb(255,215,0);
+    border: 2px solid rgb(255,215,0);
     padding: 4rem;
 }
 
 .icon {
     color: rgb(255,215,0);
     font-size: 3rem;
+}
+
+.scores {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 5rem;
+    
+}
+
+.match-result {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.result-score-container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 1rem 0;
 }
